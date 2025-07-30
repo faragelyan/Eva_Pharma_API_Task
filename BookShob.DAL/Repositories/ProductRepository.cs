@@ -37,9 +37,10 @@ namespace BookShob.Infrastructure.Repositories
         }
         public Task Delete(Product product)
         {
-            context.Products.Remove(product);
+            product.markedAsDeleted = true;
+            context.Products.Update(product);
             return Task.CompletedTask;
         }
-        
+
     }
 }

@@ -21,6 +21,7 @@ namespace BookShob.API.Controllers
         }
 
         [HttpGet]
+        [ResponseCache(CacheProfileName = "ShortTerm")]
         public async Task<ActionResult<List<ProductDto>>> GetAll()
         {
             var products = await unitOfWork.ProductRepository.GetAllAsync();

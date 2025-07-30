@@ -6,6 +6,7 @@ using BookShob.Application.Interfaces;
 using BookShob.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -24,14 +25,19 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "My API V1", Version = "v1" });
+    options.SwaggerDoc("v2", new OpenApiInfo { Title = "My API V2", Version = "v2" });
+});
+
 builder.Services.AddApiVersioning(options =>
 {
     options.AssumeDefaultVersionWhenUnspecified = true;
     options.DefaultApiVersion = new ApiVersion(1, 0);
     options.ReportApiVersions = true;
-    options.ApiVersionReader = new UrlSegmentApiVersionReader();
 });
+
 builder.Services.AddControllersWithViews(options =>
 {
     options.CacheProfiles.Add("ShortTerm", new CacheProfile
@@ -53,10 +59,9 @@ builder.Services.AddResponseCaching();
 
 var app = builder.Build();
 
-app.UseResponseCaching(); // Add this BEFORE app.UseAuthorization
+app.UseResponseCaching(); 
 
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

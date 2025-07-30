@@ -17,3 +17,4 @@ C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.DAL\obj\Debug\net9.0\Boo
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.DAL\obj\Debug\net9.0\ref\BookShob.Infrastructure.dll
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.DAL\bin\Debug\net9.0\BookShob.Application.dll
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.DAL\bin\Debug\net9.0\BookShob.Application.pdb
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.DAL\obj\Debug\net9.0\BookShob.Infrastructure.sourcelink.json

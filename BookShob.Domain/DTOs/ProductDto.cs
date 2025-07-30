@@ -13,6 +13,8 @@ namespace BookShob.Domain.DTOs
         public string Description { get; set; }
         public string Author { get; set; }
 
+        public int CategoryId { get; set; }
 
+        public bool markedAsDeleted { get; set; }
     }
 }

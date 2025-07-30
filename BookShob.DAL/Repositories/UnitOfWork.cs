@@ -28,8 +28,9 @@ namespace BookShob.Infrastructure.Repositories
 
         public Task SaveAsync()
         {
-            context.SaveChangesAsync();
-            return Task.CompletedTask;
+            return context.SaveChangesAsync();
         }
+
+
     }
 }

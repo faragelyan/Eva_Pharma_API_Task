@@ -15,3 +15,4 @@ C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Application\obj\Debug\ne
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Application\obj\Debug\net9.0\BookShob.Application.pdb
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Application\obj\Debug\net9.0\BookShob.Application.genruntimeconfig.cache
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Application\obj\Debug\net9.0\ref\BookShob.Application.dll
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Application\obj\Debug\net9.0\BookShob.Application.sourcelink.json

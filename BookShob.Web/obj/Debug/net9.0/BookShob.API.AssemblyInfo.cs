@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookShob.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+34f702e6ff7d4d153f210ae4a3d922b79367cf53")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookShob.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookShob.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
