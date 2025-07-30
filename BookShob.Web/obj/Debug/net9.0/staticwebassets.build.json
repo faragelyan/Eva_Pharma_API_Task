@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "fss30uKsr+FZMn6smwo7/3UOlWdnTu7h5zvsZzsXyQc=",
+  "Source": "BookShob.API",
+  "BasePath": "_content/BookShob.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
