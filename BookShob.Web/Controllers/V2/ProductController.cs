@@ -5,9 +5,10 @@ using BookShob.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShob.API.Controllers
+namespace BookShob.API.Controllers.V2
 {
-    [Route("api/[controller]")]
+    [ApiVersion("2.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -24,6 +25,7 @@ namespace BookShob.API.Controllers
         [ResponseCache(CacheProfileName = "ShortTerm")]
         public async Task<ActionResult<List<ProductDto>>> GetAll()
         {
+            // Same implementation as V1
             var products = await unitOfWork.ProductRepository.GetAllAsync();
             var dtos = mapper.Map<List<ProductDto>>(products);
             return Ok(dtos);
@@ -32,6 +34,7 @@ namespace BookShob.API.Controllers
         [HttpGet("{id:int}")]
         public async Task<ActionResult<ProductDto>> GetById(int id)
         {
+            // Same implementation as V1
             var product = await unitOfWork.ProductRepository.GetByIdAsync(id);
             if (product == null)
                 return NotFound();
@@ -42,15 +45,17 @@ namespace BookShob.API.Controllers
         [HttpPost]
         public async Task<ActionResult> Create(ProductDto dto)
         {
+            // Same implementation as V1
             var product = mapper.Map<Product>(dto);
             await unitOfWork.ProductRepository.AddAsync(product);
             await unitOfWork.SaveAsync();
-            return CreatedAtAction(nameof(GetById), new { id = product.Id }, dto);
+            return CreatedAtAction(nameof(GetById), new { id = product.Id, version = "2.0" }, dto);
         }
 
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Update(int id, ProductDto dto)
         {
+            // Same implementation as V1
             var product = await unitOfWork.ProductRepository.GetByIdAsync(id);
             if (product == null)
                 return NotFound();
@@ -63,6 +68,7 @@ namespace BookShob.API.Controllers
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
+            // Same implementation as V1
             var product = await unitOfWork.ProductRepository.GetByIdAsync(id);
             if (product == null)
                 return NotFound();

@@ -1,43 +1,34 @@
-﻿using BookShob.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using BookShob.Application.Mapping;
-using Microsoft.Extensions.DependencyInjection;
-using BookShob.Application.Interfaces;
+﻿using BookShob.Application.Interfaces;
+using BookShob.Infrastructure;
 using BookShob.Infrastructure.Repositories;
-using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Asp.Versioning;
+using Asp.Versioning.Conventions;
+using Asp.Versioning.ApiExplorer;
+using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.SwaggerGen;
+using ApiVersion = Asp.Versioning.ApiVersion; // ✅ Alias to avoid ambiguity
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// ---------- Database ----------
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("Constr")));
 
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
-//builder.Services.AddAutoMapper(typeof(ProductProfile), typeof(CategoryProfile));
+// ---------- AutoMapper ----------
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-/*builder.Services.AddAutoMapper(typeof(ProductProfile).Assembly);
-builder.Services.AddAutoMapper(typeof(CategoryProfile).Assembly);*/
+// ---------- Dependency Injection ----------
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(options =>
-{
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "My API V1", Version = "v1" });
-    options.SwaggerDoc("v2", new OpenApiInfo { Title = "My API V2", Version = "v2" });
-});
 
-builder.Services.AddApiVersioning(options =>
-{
-    options.AssumeDefaultVersionWhenUnspecified = true;
-    options.DefaultApiVersion = new ApiVersion(1, 0);
-    options.ReportApiVersions = true;
-});
+// ---------- Response Caching ----------
+builder.Services.AddResponseCaching();
 
+// ---------- MVC + Cache Profiles ----------
 builder.Services.AddControllersWithViews(options =>
 {
     options.CacheProfiles.Add("ShortTerm", new CacheProfile
@@ -55,28 +46,66 @@ builder.Services.AddControllersWithViews(options =>
     });
 });
 
-builder.Services.AddResponseCaching();
+// ---------- API Versioning ----------
+builder.Services.AddApiVersioning(options =>
+{
+    options.DefaultApiVersion = new ApiVersion(1, 0); // ✅ Using alias to avoid ambiguity
+    options.AssumeDefaultVersionWhenUnspecified = true;
+    options.ReportApiVersions = true;
+})
+.AddMvc(options =>
+{
+    options.Conventions.Add(new VersionByNamespaceConvention());
+})
+.AddApiExplorer(options =>
+{
+    options.GroupNameFormat = "'v'VVV"; // Formats: v1, v2
+    options.SubstituteApiVersionInUrl = true;
+});
+
+// ---------- Swagger ----------
+builder.Services.AddSwaggerGen();
+builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
+
 
 var app = builder.Build();
 
-app.UseResponseCaching(); 
-
-
+// ---------- Middleware ----------
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
+    app.UseSwagger();
     app.UseSwaggerUI(options =>
     {
-        app.UseSwagger();
-        app.UseSwaggerUI();
-        options.SwaggerEndpoint("/openapi/v1.json", "api");
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "BookShob API V1");
+        options.SwaggerEndpoint("/swagger/v2/swagger.json", "BookShob API V2");
     });
 }
 
 app.UseHttpsRedirection();
-
+app.UseResponseCaching();
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
+
+// ---------- Swagger Config Class ----------
+public class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>
+{
+    private readonly IApiVersionDescriptionProvider provider;
+
+    public ConfigureSwaggerOptions(IApiVersionDescriptionProvider provider)
+    {
+        this.provider = provider;
+    }
+
+    public void Configure(SwaggerGenOptions options)
+    {
+        foreach (var description in provider.ApiVersionDescriptions)
+        {
+            options.SwaggerDoc(description.GroupName, new OpenApiInfo
+            {
+                Title = $"BookShob API {description.ApiVersion}",
+                Version = description.ApiVersion.ToString()
+            });
+        }
+    }
+}

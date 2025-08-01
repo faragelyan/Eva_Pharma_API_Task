@@ -12,7 +12,7 @@ namespace BookShob.Application.Mapping
     {
         public ProductProfile()
         {
-                CreateMap<Product,ProductDto>().ReverseMap().ForMember(dest => dest.Id, opt => opt.Ignore()); ;
+                CreateMap<Product,ProductDto>().ReverseMap().ForMember(dest => dest.Id, opt => opt.Ignore()); 
         }
     }
 }

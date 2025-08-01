@@ -6,7 +6,7 @@ using BookShob.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BookShob.API.Controllers
+namespace BookShob.API.Controllers.Common
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -22,24 +22,24 @@ namespace BookShob.API.Controllers
         }
         [HttpGet("paginated")]
         public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams pagination)
-{
-    var categories = await unitOfWork.CategoryRepository
-        .GetPaginatedAsync(pagination.PageNumber, pagination.ValidPageSize);
+        {
+            var categories = await unitOfWork.CategoryRepository
+                .GetPaginatedAsync(pagination.PageNumber, pagination.ValidPageSize);
 
-    var totalCount = await unitOfWork.CategoryRepository.CountAsync();
+            var totalCount = await unitOfWork.CategoryRepository.CountAsync();
 
-    var categoryDtos = mapper.Map<List<CategoryDto>>(categories);
+            var categoryDtos = mapper.Map<List<CategoryDto>>(categories);
 
-    var response = new
-    {
-        TotalCount = totalCount,
-        PageNumber = pagination.PageNumber,
-        PageSize = pagination.ValidPageSize,
-        Data = categoryDtos
-    };
+            var response = new
+            {
+                TotalCount = totalCount,
+                pagination.PageNumber,
+                PageSize = pagination.ValidPageSize,
+                Data = categoryDtos
+            };
 
-    return Ok(response);
-}
+            return Ok(response);
+        }
 
 
         [HttpGet]
