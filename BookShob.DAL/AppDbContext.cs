@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Identity;
 using BookShob.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace BookShob.Infrastructure
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext:IdentityDbContext<ApplicationUser,IdentityRole<Guid>,Guid>
     {
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
@@ -17,10 +14,15 @@ namespace BookShob.Infrastructure
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+            base.OnModelCreating(builder);
+            builder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+            builder.Entity<ApplicationUser>(b =>
+            {
+                b.Property(u => u.FullName).HasMaxLength(200);
+                b.Property(u => u.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
+            });
         }
     }
 }

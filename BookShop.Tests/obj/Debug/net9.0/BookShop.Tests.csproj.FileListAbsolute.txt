@@ -173,3 +173,5 @@ C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShop.Tests\obj\Debug\net9.0\r
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShop.Tests\obj\Debug\net9.0\BookShop.Tests.pdb
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShop.Tests\obj\Debug\net9.0\BookShop.Tests.genruntimeconfig.cache
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShop.Tests\obj\Debug\net9.0\ref\BookShop.Tests.dll
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShop.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShop.Tests\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

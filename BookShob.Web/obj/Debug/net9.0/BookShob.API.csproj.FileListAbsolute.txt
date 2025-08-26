@@ -146,12 +146,6 @@ C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\sco
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets\msbuild.BookShob.API.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets\msbuild.BookShob.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets\msbuild.build.BookShob.API.props
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.BookShob.API.props
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.BookShob.API.props
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets.pack.json
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\BookShob.6F044A04.Up2Date
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\BookShob.API.dll
@@ -180,3 +174,10 @@ C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\bin\Debug\net9.0\Mic
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\bin\Debug\net9.0\Castle.Core.dll
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\bin\Debug\net9.0\FakeItEasy.dll
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\bin\Debug\net9.0\Moq.dll
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Debug\net9.0\staticwebassets.build.json.cache
