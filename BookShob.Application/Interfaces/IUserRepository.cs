@@ -11,5 +11,6 @@ namespace BookShob.Application.Interfaces
         Task<IList<string>> GetRolesAsync(ApplicationUser user);
         Task<bool> CheckPasswordAsync(ApplicationUser user, string password);
 
+
     }
 }

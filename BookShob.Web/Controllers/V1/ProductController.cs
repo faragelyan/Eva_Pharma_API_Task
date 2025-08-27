@@ -35,7 +35,7 @@ namespace BookShob.API.Controllers.V1
 
         // 👥 Any authenticated user can view product details
         [HttpGet("{id:int}")]
-        [Authorize(Roles = "User,Admin")]
+        //[Authorize(Roles = "User,Admin")]
         public async Task<ActionResult<ProductDto>> GetById(int id)
         {
             var product = await unitOfWork.ProductRepository.GetByIdAsync(id);
@@ -48,7 +48,7 @@ namespace BookShob.API.Controllers.V1
 
         // 🛠 Only Admin can create
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "user")]
         public async Task<ActionResult> Create(ProductDto dto)
         {
             var product = mapper.Map<Product>(dto);

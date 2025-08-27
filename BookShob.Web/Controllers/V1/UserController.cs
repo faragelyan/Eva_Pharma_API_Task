@@ -34,7 +34,12 @@ namespace BookShob.API.Controllers.V1
             var result = await _userRepo.CreateUserAsync(user, dto.Password);
 
             if (result.Succeeded)
-                return Ok("User created successfully");
+            {
+                // ✅ Assign default role "User"
+                await _userRepo.AddToRoleAsync(user, "User");
+
+                return Ok("User created successfully and assigned to role 'User'");
+            }
 
             // 👇 Return real error messages
             return BadRequest(result.Errors.Select(e => e.Description));

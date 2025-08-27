@@ -3,6 +3,7 @@ using BookShob.Application.Interfaces;
 using BookShob.Domain.DTOs;
 using BookShob.Domain.Entities;
 using BookShob.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,6 +22,7 @@ namespace BookShob.API.Controllers.Common
             this.mapper = mapper;
         }
         [HttpGet("paginated")]
+        //[Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams pagination)
         {
             var categories = await unitOfWork.CategoryRepository

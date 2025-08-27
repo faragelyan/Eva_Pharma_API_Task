@@ -53,5 +53,7 @@ namespace BookShob.Infrastructure.Repositories
             return await _userManager.CheckPasswordAsync(user, password);
         }
 
+
+
     }
 }
