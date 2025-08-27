@@ -158,7 +158,6 @@ C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\bin\Release\net9.0\B
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\bin\Release\net9.0\BookShob.Infrastructure.pdb
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\bin\Release\net9.0\BookShob.Domain.pdb
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\BookShob.API.csproj.AssemblyReference.cache
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\rpswa.dswa.cache.json
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\BookShob.API.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\BookShob.API.AssemblyInfoInputs.cache
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\BookShob.API.AssemblyInfo.cs
@@ -166,15 +165,11 @@ C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\B
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\BookShob.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\BookShob.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\BookShob.API.sourcelink.json
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\rjimswa.dswa.cache.json
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\rjsmrazor.dswa.cache.json
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\rjsmcshtml.dswa.cache.json
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\scopedcss\bundle\BookShob.API.styles.css
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\staticwebassets.build.json
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\staticwebassets.build.json.cache
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\staticwebassets.development.json
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\staticwebassets.build.endpoints.json
-C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\staticwebassets.upToDateCheck.txt
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\BookShob.6F044A04.Up2Date
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\BookShob.API.dll
 C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Web\obj\Release\net9.0\refint\BookShob.API.dll
