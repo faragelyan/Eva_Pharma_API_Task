@@ -10,7 +10,7 @@ namespace BookShob.API.Controllers.V1
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-    [Authorize] // ✅ Require authentication for all methods by default
+    //[Authorize] // ✅ Require authentication for all methods by default
     public class ProductController : ControllerBase
     {
         private readonly IUnitOfWork unitOfWork;
@@ -36,6 +36,7 @@ namespace BookShob.API.Controllers.V1
         // 👥 Any authenticated user can view product details
         [HttpGet("{id:int}")]
         //[Authorize(Roles = "User,Admin")]
+        [Authorize(Roles = "User")]
         public async Task<ActionResult<ProductDto>> GetById(int id)
         {
             var product = await unitOfWork.ProductRepository.GetByIdAsync(id);

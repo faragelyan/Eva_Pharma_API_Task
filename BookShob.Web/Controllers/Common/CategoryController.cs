@@ -22,7 +22,7 @@ namespace BookShob.API.Controllers.Common
             this.mapper = mapper;
         }
         [HttpGet("paginated")]
-        //[Authorize(Roles = "ADMIN")]
+        [Authorize(Roles = "User")]
         public async Task<IActionResult> GetPaginated([FromQuery] PaginationParams pagination)
         {
             var categories = await unitOfWork.CategoryRepository

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookShob.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bbe2aeb4c161520a79a97b80e6bed0025f3e80c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32566d93a00ec0366f790751cb986eba197a9726")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookShob.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookShob.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

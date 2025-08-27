@@ -1,0 +1,15 @@
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\bin\Release\net9.0\BookShob.Domain.deps.json
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\bin\Release\net9.0\BookShob.Domain.runtimeconfig.json
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\bin\Release\net9.0\BookShob.Domain.dll
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\bin\Release\net9.0\BookShob.Domain.pdb
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\BookShob.Domain.csproj.AssemblyReference.cache
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\BookShob.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\BookShob.Domain.AssemblyInfoInputs.cache
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\BookShob.Domain.AssemblyInfo.cs
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\BookShob.Domain.csproj.CoreCompileInputs.cache
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\BookShob.Domain.sourcelink.json
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\BookShob.Domain.dll
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\refint\BookShob.Domain.dll
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\BookShob.Domain.pdb
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\BookShob.Domain.genruntimeconfig.cache
+C:\Users\MOHAMED\source\repos\Eva_pharma_Task2\BookShob.Domain\obj\Release\net9.0\ref\BookShob.Domain.dll
